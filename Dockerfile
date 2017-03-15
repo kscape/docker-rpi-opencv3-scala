@@ -1,12 +1,12 @@
 FROM kscape/docker-rpi-opencv3-buildtools
 
 RUN cd /tmp && \ 
-    wget -q -O opencv.zip https://github.com/opencv/opencv/archive/3.2.0.zip && \
+    wget -q -O opencv.zip https://github.com/opencv/opencv/archive/3.1.0.zip && \
     unzip -q opencv.zip && \
-    wget -q -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.2.0.zip && \
+    wget -q -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.1.0.zip && \
     unzip -q opencv_contrib.zip && \
-    mkdir opencv-3.2.0/build && \
-    cd opencv-3.2.0/build && \
+    mkdir opencv-3.1.0/build && \
+    cd opencv-3.1.0/build && \
     cmake \
     -D CMAKE_BUILD_TYPE=RELEASE \
     -D BUILD_SHARED_LIBRARY=NO \
